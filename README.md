@@ -26,21 +26,14 @@ pip install -e .
 
 The server communicates with REAPER via [python-reapy](https://github.com/RomeoDespres/reapy), which requires REAPER's distant API to be enabled.
 
-### Option 1: Run the setup script
-
-```bash
-python scripts/enable_reapy.py
-```
-
-### Option 2: Manual setup
-
 1. Open REAPER
 2. Go to Actions > Run ReaScript
-3. Run this Python code:
+3. Select `scripts/enable_reapy.py` from this repo (or create a new script with the contents below)
    ```python
    import reapy
    reapy.config.enable_dist_api()
    ```
+4. Restart REAPER
 
 ## Usage
 
